@@ -47,179 +47,217 @@ export default function RollForResponseWebsite() {
     },
   ];
 
+  const audience = [
+    {
+      title: "Agencies",
+      text: "Use Roll for Response for training nights, structured field education, and playtest-based curriculum development.",
+    },
+    {
+      title: "FTOs & Educators",
+      text: "Guide learners through scenarios, debrief decisions, and turn gameplay into serious reflective learning.",
+    },
+    {
+      title: "Students & Clinicians",
+      text: "Build clinical reasoning, scene awareness, and adaptability in a format that feels memorable and engaging.",
+    },
+  ];
+
+  const pageLinks = [
+    "Home",
+    "About the System",
+    "Training Mode",
+    "Campaign Mode",
+    "Scenario Library",
+    "Instructor Tools",
+    "Field Journal",
+    "Contact / Demo",
+  ];
+
   return (
-    <div style={{minHeight:"100vh", background:"radial-gradient(circle at top, rgba(212,175,55,0.10), transparent 30%), linear-gradient(180deg,#08111c 0%,#0f1f33 35%,#f5ead1 35%,#f7eed9 100%)", color:"#0f172a"}}>
-      <header style={{position:"relative", overflow:"hidden", borderBottom:"1px solid rgba(253,230,138,0.12)", background:"#020617", color:"white"}}>
-        <div style={{maxWidth:1280, margin:"0 auto", display:"grid", gap:"2.5rem", padding:"5rem 1.5rem", gridTemplateColumns:"repeat(auto-fit, minmax(320px, 1fr))"}}>
-          <div style={{position:"relative", zIndex:10, display:"flex", flexDirection:"column", justifyContent:"center"}}>
-            <div style={{marginBottom:"1rem", display:"inline-flex", width:"fit-content", alignItems:"center", gap:"0.5rem", borderRadius:9999, border:"1px solid rgba(252,211,77,0.3)", background:"rgba(255,255,255,0.05)", padding:"0.6rem 1rem", fontSize:"0.8rem", letterSpacing:"0.2em", color:"#fde68a", textTransform:"uppercase"}}>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.10),_transparent_30%),linear-gradient(180deg,#08111c_0%,#0f1f33_35%,#f5ead1_35%,#f7eed9_100%)] text-slate-900">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 text-white backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-12">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-amber-300/30 bg-white/5 text-amber-300 shadow-lg shadow-amber-500/10">
+              ✦
+            </div>
+            <div>
+              <div className="text-lg font-black tracking-tight">Roll for Response</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-slate-400">Modern EMS training</div>
+            </div>
+          </div>
+          <nav className="hidden items-center gap-6 text-sm text-slate-300 lg:flex">
+            <a href="#system" className="transition hover:text-white">System</a>
+            <a href="#training" className="transition hover:text-white">Training Mode</a>
+            <a href="#audience" className="transition hover:text-white">Who It&apos;s For</a>
+            <a href="#demo" className="transition hover:text-white">Request a Demo</a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="relative overflow-hidden border-b border-amber-200/20 bg-slate-950 text-white">
+        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(90deg,transparent,rgba(212,175,55,0.18),transparent)]" />
+        <div className="absolute -top-24 right-[-60px] h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
+        <div className="absolute left-[-80px] top-24 h-60 w-60 rounded-full bg-blue-400/10 blur-3xl" />
+
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:px-10 lg:px-12">
+          <div className="relative z-10 flex flex-col justify-center">
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-amber-300/30 bg-white/5 px-4 py-2 text-sm tracking-[0.2em] text-amber-200 uppercase">
               <span>Roll for Response</span>
-              <span style={{color:"#fbbf24"}}>✦</span>
+              <span className="text-amber-400">✦</span>
               <span>Train the way you actually practice</span>
             </div>
 
-            <h1 style={{maxWidth:700, fontSize:"clamp(2.5rem, 6vw, 4.5rem)", lineHeight:1.05, margin:0, fontWeight:900}}>
+            <h1 className="max-w-xl text-5xl font-black tracking-tight md:text-6xl">
               Modern EMS training with a subtle fantasy edge.
             </h1>
 
-            <p style={{marginTop:"1.5rem", maxWidth:760, fontSize:"1.15rem", lineHeight:1.8, color:"#cbd5e1"}}>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               A clinical decision-making platform that blends realistic EMS education,
               scenario-based play, and reflective debriefing into one cohesive training experience.
             </p>
 
-            <div style={{marginTop:"2rem", display:"flex", flexWrap:"wrap", gap:"1rem"}}>
-              <button style={{borderRadius:"1rem", background:"#fbbf24", color:"#0f172a", border:"none", padding:"0.95rem 1.4rem", fontWeight:700, boxShadow:"0 10px 24px rgba(251,191,36,0.2)", cursor:"pointer"}}>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#system" className="rounded-2xl bg-amber-400 px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5">
                 Explore the System
-              </button>
-              <button style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.2)", background:"rgba(255,255,255,0.05)", color:"white", padding:"0.95rem 1.4rem", fontWeight:700, cursor:"pointer"}}>
-                View Training Mode
-              </button>
+              </a>
+              <a href="#demo" className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/10">
+                Request a Demo
+              </a>
             </div>
 
-            <div style={{marginTop:"2.5rem", display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(160px, 1fr))", gap:"1rem", maxWidth:900}}>
+            <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 text-sm text-slate-300 sm:grid-cols-4">
               {pillars.map((item) => (
-                <div key={item} style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.1)", background:"rgba(255,255,255,0.05)", padding:"1rem", color:"#cbd5e1", fontSize:"0.95rem"}}>
+                <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <div style={{position:"relative", zIndex:10, display:"flex", alignItems:"center", justifyContent:"center"}}>
-            <div style={{width:"100%", maxWidth:560, borderRadius:32, border:"1px solid rgba(253,230,138,0.18)", background:"rgba(255,255,255,0.08)", padding:"1.25rem", boxShadow:"0 25px 60px rgba(0,0,0,0.25)"}}>
-              <div style={{borderRadius:28, border:"1px solid rgba(255,255,255,0.08)", background:"rgba(15,23,42,0.96)", padding:"1.5rem", color:"#e2e8f0"}}>
-                <div style={{marginBottom:"1rem", display:"flex", alignItems:"start", justifyContent:"space-between", gap:"1rem"}}>
+          <div className="relative z-10 flex items-center justify-center">
+            <div className="relative w-full max-w-xl rounded-[32px] border border-amber-200/20 bg-white/10 p-5 shadow-2xl backdrop-blur-md">
+              <div className="rounded-[28px] border border-white/10 bg-slate-900/90 p-6 text-slate-100 shadow-inner">
+                <div className="mb-4 flex items-center justify-between">
                   <div>
-                    <p style={{margin:0, fontSize:"0.72rem", textTransform:"uppercase", letterSpacing:"0.3em", color:"#fde68a"}}>Field Scenario</p>
-                    <h2 style={{margin:"0.75rem 0 0", fontSize:"1.6rem", lineHeight:1.2}}>STEMI — The Clock Is Ticking</h2>
+                    <p className="text-xs uppercase tracking-[0.3em] text-amber-300">Field Scenario</p>
+                    <h2 className="mt-2 text-2xl font-bold">STEMI — The Clock Is Ticking</h2>
                   </div>
-                  <div style={{borderRadius:"1rem", border:"1px solid rgba(253,230,138,0.25)", background:"rgba(251,191,36,0.10)", padding:"0.75rem 1rem", textAlign:"center"}}>
-                    <div style={{fontSize:"0.72rem", textTransform:"uppercase", letterSpacing:"0.2em", color:"#fde68a"}}>Tier</div>
-                    <div style={{fontSize:"1.1rem", fontWeight:800, color:"#fcd34d"}}>ALS</div>
+                  <div className="rounded-2xl border border-amber-300/30 bg-amber-400/10 px-4 py-3 text-center">
+                    <div className="text-xs uppercase tracking-[0.2em] text-amber-200">Tier</div>
+                    <div className="text-lg font-bold text-amber-300">ALS</div>
                   </div>
                 </div>
 
-                <div style={{display:"grid", gap:"1rem", gridTemplateColumns:"repeat(auto-fit, minmax(220px, 1fr))"}}>
-                  <div style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.08)", background:"rgba(30,41,59,0.85)", padding:"1rem"}}>
-                    <p style={{margin:0, fontSize:"0.72rem", textTransform:"uppercase", letterSpacing:"0.2em", color:"#fde68a"}}>Dispatch</p>
-                    <p style={{margin:"0.7rem 0 0", fontSize:"0.95rem", lineHeight:1.7, color:"#cbd5e1"}}>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-slate-800/70 p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Dispatch</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
                       68-year-old male with crushing chest pain, diaphoresis, and hypotension.
                     </p>
                   </div>
-                  <div style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.08)", background:"rgba(30,41,59,0.85)", padding:"1rem"}}>
-                    <p style={{margin:0, fontSize:"0.72rem", textTransform:"uppercase", letterSpacing:"0.2em", color:"#fde68a"}}>Roll Triggers</p>
-                    <p style={{margin:"0.7rem 0 0", fontSize:"0.95rem", lineHeight:1.7, color:"#cbd5e1"}}>
+                  <div className="rounded-2xl border border-white/10 bg-slate-800/70 p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Roll Triggers</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
                       Assessment, ECG interpretation, medication administration, transport decision.
                     </p>
                   </div>
-                  <div style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.08)", background:"rgba(30,41,59,0.85)", padding:"1rem", gridColumn:"1 / -1"}}>
-                    <p style={{margin:0, fontSize:"0.72rem", textTransform:"uppercase", letterSpacing:"0.2em", color:"#fde68a"}}>Design Intent</p>
-                    <p style={{margin:"0.7rem 0 0", fontSize:"0.95rem", lineHeight:1.7, color:"#cbd5e1"}}>
+                  <div className="rounded-2xl border border-white/10 bg-slate-800/70 p-4 md:col-span-2">
+                    <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Design Intent</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
                       Grounded clinical realism supported by gold accents, parchment-inspired framing,
                       and subtle tabletop energy.
                     </p>
                   </div>
                 </div>
 
-                <div style={{marginTop:"1.25rem", display:"flex", alignItems:"center", justifyContent:"space-between", borderRadius:"1rem", border:"1px solid rgba(253,230,138,0.18)", background:"linear-gradient(90deg, rgba(251,191,36,0.12), transparent, rgba(96,165,250,0.12))", padding:"0.9rem 1rem"}}>
-                  <span style={{fontSize:"0.95rem", fontWeight:600, color:"#e2e8f0"}}>After Action Review drives the learning.</span>
-                  <span style={{color:"#fcd34d"}}>✦</span>
+                <div className="mt-5 flex items-center justify-between rounded-2xl border border-amber-300/20 bg-gradient-to-r from-amber-400/10 via-transparent to-blue-400/10 px-4 py-3">
+                  <span className="text-sm font-medium text-slate-200">After Action Review drives the learning.</span>
+                  <span className="text-amber-300">✦</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       <main>
-        <section style={{maxWidth:1280, margin:"0 auto", padding:"5rem 1.5rem"}}>
-          <div style={{marginBottom:"3rem", maxWidth:760}}>
-            <p style={{fontSize:"0.85rem", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.25em", color:"#64748b"}}>Core identity</p>
-            <h2 style={{marginTop:"0.75rem", fontSize:"clamp(2rem, 4vw, 3rem)", lineHeight:1.1, color:"#0f172a"}}>Professional first. Mythic in texture.</h2>
-            <p style={{marginTop:"1.25rem", fontSize:"1.1rem", lineHeight:1.9, color:"#334155"}}>
+        <section id="system" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="mb-12 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Core identity</p>
+            <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-900">Professional first. Mythic in texture.</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-700">
               The website should feel like an EMS education platform first, with fantasy details used as atmosphere:
               gold dividers, subtle iconography, a few parchment notes, and a D20-inspired geometry language.
             </p>
           </div>
 
-          <div style={{display:"grid", gap:"1.5rem", gridTemplateColumns:"repeat(auto-fit, minmax(240px, 1fr))"}}>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {features.map((feature) => (
-              <div key={feature.title} style={{borderRadius:28, border:"1px solid #e2e8f0", background:"rgba(255,255,255,0.82)", padding:"1.5rem", boxShadow:"0 6px 24px rgba(15,23,42,0.06)"}}>
-                <div style={{marginBottom:"1rem", display:"flex", height:56, width:56, alignItems:"center", justifyContent:"center", borderRadius:18, background:"#020617", color:"#fcd34d", fontSize:"1.6rem"}}>
+              <div
+                key={feature.title}
+                className="group rounded-[28px] border border-slate-200 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-2xl text-amber-300 shadow-lg">
                   {feature.icon}
                 </div>
-                <h3 style={{margin:"0 0 0.5rem", fontSize:"1.2rem", color:"#0f172a"}}>{feature.title}</h3>
-                <p style={{margin:0, lineHeight:1.8, color:"#475569"}}>{feature.text}</p>
+                <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{feature.text}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section style={{borderTop:"1px solid #e2e8f0", borderBottom:"1px solid #e2e8f0", background:"rgba(255,255,255,0.55)"}}>
-          <div style={{maxWidth:1280, margin:"0 auto", display:"grid", gap:"1.5rem", gridTemplateColumns:"repeat(auto-fit, minmax(260px, 1fr))", padding:"5rem 1.5rem"}}>
+        <section id="training" className="border-y border-slate-200 bg-white/60">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 py-20 md:grid-cols-3 md:px-10 lg:px-12">
             {sections.map((section) => (
-              <div key={section.heading} style={{borderRadius:28, border:"1px solid rgba(253,230,138,0.65)", background:"linear-gradient(180deg, white, #fffbeb)", padding:"1.75rem", boxShadow:"0 6px 24px rgba(15,23,42,0.05)"}}>
-                <div style={{marginBottom:"1.25rem", height:4, width:64, borderRadius:9999, background:"#fbbf24"}} />
-                <h3 style={{margin:0, fontSize:"1.5rem", lineHeight:1.2, color:"#0f172a"}}>{section.heading}</h3>
-                <p style={{margin:"1rem 0 0", lineHeight:1.9, color:"#334155"}}>{section.body}</p>
+              <div key={section.heading} className="rounded-[28px] border border-amber-200/60 bg-gradient-to-b from-white to-amber-50 p-7 shadow-sm">
+                <div className="mb-5 h-1 w-16 rounded-full bg-amber-400" />
+                <h3 className="text-2xl font-bold tracking-tight text-slate-900">{section.heading}</h3>
+                <p className="mt-4 leading-8 text-slate-700">{section.body}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section style={{maxWidth:1280, margin:"0 auto", padding:"5rem 1.5rem"}}>
-          <div style={{display:"grid", gap:"2.5rem", gridTemplateColumns:"repeat(auto-fit, minmax(320px, 1fr))", alignItems:"center"}}>
+        <section id="audience" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p style={{fontSize:"0.85rem", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.25em", color:"#64748b"}}>Website direction</p>
-              <h2 style={{marginTop:"0.75rem", fontSize:"clamp(2rem, 4vw, 3rem)", lineHeight:1.1}}>What the experience should communicate</h2>
-              <div style={{marginTop:"2rem", display:"grid", gap:"1rem", color:"#334155", fontSize:"1.05rem", lineHeight:1.9}}>
-                <p>
-                  Visitors should immediately understand that this is not generic gamification. It is a serious EMS
-                  education system with a memorable identity.
-                </p>
-                <p>
-                  The fantasy layer should appear through atmosphere rather than costume: illumination, parchment notes,
-                  heraldic geometry, and language like <strong style={{color:"#0f172a"}}>legendary calls</strong>, <strong style={{color:"#0f172a"}}>field journals</strong>, and <strong style={{color:"#0f172a"}}>campaign mode</strong>.
-                </p>
-                <p>
-                  The modern EMS layer should dominate through clean typography, realistic scenarios, educator-facing
-                  structure, and a calm professional layout.
-                </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Who it&apos;s for</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight">Built for agencies, educators, and crews who want better training.</h2>
+              <div className="mt-8 grid gap-5">
+                {audience.map((item) => (
+                  <div key={item.title} className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+                    <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+                    <p className="mt-3 leading-8 text-slate-700">{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div style={{borderRadius:32, border:"1px solid #e2e8f0", background:"#020617", padding:"2rem", color:"white", boxShadow:"0 20px 45px rgba(2,6,23,0.2)"}}>
-              <p style={{fontSize:"0.85rem", textTransform:"uppercase", letterSpacing:"0.3em", color:"#fcd34d"}}>Visual recipe</p>
-              <ul style={{marginTop:"1.5rem", display:"grid", gap:"1rem", paddingLeft:"1.1rem", color:"#cbd5e1", lineHeight:1.8}}>
-                <li>Deep navy and slate as the core palette</li>
-                <li>Gold used as a premium accent, not the base color</li>
-                <li>Parchment tones reserved for callouts and texture</li>
-                <li>Rounded modern cards with subtle fantasy framing</li>
-                <li>Real EMS photography or realism-inspired illustration</li>
+            <div className="rounded-[32px] border border-slate-200 bg-slate-950 p-8 text-white shadow-2xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-amber-300">Visual recipe</p>
+              <ul className="mt-6 space-y-4 text-slate-300">
+                <li>• Deep navy and slate as the core palette</li>
+                <li>• Gold used as a premium accent, not the base color</li>
+                <li>• Parchment tones reserved for callouts and texture</li>
+                <li>• Rounded modern cards with subtle fantasy framing</li>
+                <li>• Real EMS photography or realism-inspired illustration</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section style={{background:"#020617", color:"white"}}>
-          <div style={{maxWidth:1280, margin:"0 auto", padding:"5rem 1.5rem"}}>
-            <div style={{display:"grid", gap:"2rem", gridTemplateColumns:"repeat(auto-fit, minmax(320px, 1fr))"}}>
+        <section className="bg-slate-950 text-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
-                <p style={{fontSize:"0.85rem", fontWeight:700, textTransform:"uppercase", letterSpacing:"0.3em", color:"#fcd34d"}}>Suggested pages</p>
-                <h2 style={{marginTop:"0.75rem", fontSize:"clamp(2rem, 4vw, 3rem)", lineHeight:1.1}}>A website structure that can grow with the project</h2>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Suggested pages</p>
+                <h2 className="mt-3 text-4xl font-black tracking-tight">A website structure that can grow with the project</h2>
               </div>
-              <div style={{display:"grid", gap:"1rem", gridTemplateColumns:"repeat(auto-fit, minmax(180px, 1fr))"}}>
-                {[
-                  "Home",
-                  "About the System",
-                  "Training Mode",
-                  "Campaign Mode",
-                  "Scenario Library",
-                  "Instructor Tools",
-                  "Field Journal",
-                  "Contact / Demo",
-                ].map((item) => (
-                  <div key={item} style={{borderRadius:"1rem", border:"1px solid rgba(255,255,255,0.1)", background:"rgba(255,255,255,0.05)", padding:"1rem", color:"#e2e8f0"}}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {pageLinks.map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-200 backdrop-blur-sm">
                     {item}
                   </div>
                 ))}
@@ -227,7 +265,64 @@ export default function RollForResponseWebsite() {
             </div>
           </div>
         </section>
+
+        <section id="demo" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Request a demo</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-900">Invite interest before full launch.</h2>
+              <p className="mt-5 text-lg leading-8 text-slate-700">
+                Use this section to collect playtest requests, agency interest, educator inquiries, or conference follow-up.
+                It keeps the site useful even before full public release.
+              </p>
+              <div className="mt-8 rounded-[28px] border border-amber-200 bg-amber-50 p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">Suggested copy</p>
+                <p className="mt-3 leading-8 text-slate-700">
+                  Interested in playtesting Roll for Response, requesting a demo, or exploring agency use?
+                  Send a message and we&apos;ll follow up with next steps.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-lg">
+              <div className="grid gap-5">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Name</label>
+                  <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-amber-400" placeholder="Your name" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Email</label>
+                  <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-amber-400" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Organization</label>
+                  <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-amber-400" placeholder="Agency, school, or team" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Message</label>
+                  <textarea className="min-h-[160px] w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-amber-400" placeholder="Tell us what kind of training, playtesting, or demo you’re interested in." />
+                </div>
+                <button className="rounded-2xl bg-slate-950 px-6 py-4 font-semibold text-white transition hover:bg-slate-800">
+                  Send inquiry
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer className="border-t border-slate-200 bg-white/80">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between md:px-10 lg:px-12">
+          <div>
+            <span className="font-semibold text-slate-900">Roll for Response</span> — Modern EMS training with a subtle fantasy edge.
+          </div>
+          <div className="flex flex-wrap gap-5">
+            <a href="#system" className="hover:text-slate-900">System</a>
+            <a href="#training" className="hover:text-slate-900">Training Mode</a>
+            <a href="#demo" className="hover:text-slate-900">Contact</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
